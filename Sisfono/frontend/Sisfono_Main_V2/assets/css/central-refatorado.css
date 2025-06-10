@@ -1,0 +1,763 @@
+/* Importação da fonte */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+/* ======================
+   VARIÁVEIS DE CORES
+====================== */
+:root {
+  --main-color: #4fa095;
+  --second-color: #153462;
+  --white-color: #ffffff;
+  --grey-color: #8b8b8b;
+  --grey-color2: #c6c6c6;
+  --bg-color: #030f19;
+  --input-color: #2a8276;
+}
+
+/* ======================
+   RESET BÁSICO
+====================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", serif;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--white-color);
+}
+
+.body-forms {
+  padding: 20px;
+  color: #333;
+}
+
+/* ======================
+   CONTAINERS GERAIS
+====================== */
+.container-areaResponsavel {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.login-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+.container-cadastro,
+.container-agendamento {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* ======================
+   HEADER E LOGO
+====================== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.logo {
+  margin-top: 1.5rem;
+  width: 9rem;
+  height: 2.5rem;
+}
+
+.login-logo {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 2.5rem;
+  color: var(--main-color);
+}
+
+/* ======================
+   LINKS E NAVEGAÇÃO
+====================== */
+.back-arrow {
+  font-size: 2.5rem;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.back-arrow a {
+  text-decoration: none;
+  color: #030f19;
+}
+
+.link-register {
+  margin-top: 2rem;
+  align-self: flex-start;
+  color: var(--grey-color);
+}
+
+.link-register:hover {
+  color: #555;
+  transition: 0.5s;
+}
+
+.termos {
+  font-size: 11px;
+  color: #333;
+  margin-top: 5px;
+}
+
+.termos a {
+  color: #2e7b75;
+  text-decoration: none;
+}
+
+/* ======================
+   LAYOUT DO LOGIN
+====================== */
+.login-left {
+  width: 65%;
+  background-color: #fefdfa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-image {
+  width: 70%;
+}
+
+.login-right {
+  width: 35%;
+  background-color: var(--white-color);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* ======================
+   TÍTULOS E TEXTOS
+====================== */
+h1 {
+  color: #2e7b75;
+  margin-top: 1rem;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+  font-size: 26px;
+}
+
+/* ======================
+   FORMULÁRIOS
+====================== */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+.form-pesquisaCpf {
+  display: flex;
+  gap: 40px;
+  margin-top: 1rem;
+  flex-direction: column;
+}
+
+.form-cpf {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-label-cpf {
+  font-size: 1.5rem;
+  padding: 5rem;
+}
+
+.form-actions-cpf {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-cadastro {
+  display: flex;
+  gap: 40px;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.form-left,
+.form-right {
+  flex: 1;
+  min-width: 300px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.label-agendamento {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+  margin-top: 14px;
+}
+
+/* ======================
+   INPUTS
+====================== */
+input {
+  width: 100%;
+  height: 2.5rem;
+  font-size: 16px;
+  padding: 0 6px;
+  border: 1px solid #989898;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  color: var(--input-color);
+  font-weight: 600;
+  transition: all 0.3s linear;
+  -webkit-appearance: none;
+}
+
+input:focus {
+  border: 3px solid var(--main-color);
+  outline: none;
+}
+
+input::placeholder {
+  color: #aaa;
+}
+
+.form-input-cpf {
+  width: 100%;
+  height: 4rem;
+  font-size: 20px;
+  padding: 0 6px;
+  border: 1px solid #989898;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  color: var(--input-color);
+  font-weight: 600;
+  transition: all 0.3s linear;
+  -webkit-appearance: none;
+}
+
+.form-input-cpf:focus {
+  border: 3px solid var(--main-color);
+  outline: none;
+}
+
+.form-input-cpf::placeholder {
+  color: #aaa;
+}
+
+.input_wrapper {
+  position: relative;
+}
+
+.input_wrapper i {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #555;
+}
+
+.input_wrapper input {
+  padding-left: 35px;
+  /* espaço para o ícone */
+  height: 45px;
+  width: 100%;
+}
+
+.inputs-agendamento {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-agendamento-left {
+  width: 30%;
+}
+
+.input-agendamento-right {
+  width: 30%;
+}
+
+/* ======================
+   ÍCONES NOS INPUTS
+====================== */
+.input_wrapper {
+  position: relative;
+}
+
+.input_wrapper i {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #555;
+}
+
+.input_wrapper input {
+  padding-left: 35px;
+  height: 45px;
+}
+
+/* ======================
+   BOTÕES
+====================== */
+.btn-salvar,
+.btn-responsavel {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 20px;
+  border: none;
+  border-radius: 24px;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: var(--input-color);
+  color: #fff;
+  box-shadow: 0 2px 6px -1px rgba(0, 0, 0, 0.13);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+
+.btn-login {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 20px;
+  border: none;
+  border-radius: 24px;
+  background-color: var(--input-color);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow: 0 2px 6px -1px rgba(0, 0, 0, 0.13);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-login:hover,
+.btn-salvar:hover {
+  transform: translateY(-3px);
+  background-color: var(--main-color);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.btn-responsavel {
+  background-color: transparent;
+  color: initial;
+  outline: 3px solid var(--main-color);
+}
+
+.btn-responsavel:hover {
+  background-color: var(--input-color);
+  color: #fff;
+  outline: none;
+}
+
+button {
+  background-color: #2e7b75;
+  color: white;
+  border: 1px solid #2e7b75;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #25665f;
+}
+
+.btn-pesquisar {
+  text-align: center;
+  text-decoration: none;
+
+  width: 50%;
+  padding: 1rem;
+
+  border: none;
+  border-radius: 20px;
+  background-color: var(--input-color);
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 0 2px 6px -1px rgba(0, 0, 0, 0.13);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-pesquisar:hover {
+  transform: translateY(-3px);
+  background-color: var(--main-color);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.btn-agendamento {
+  display: flex;
+  justify-content: center; /* centraliza os botões */
+  align-items: center;
+  gap: 1rem; /* espaçamento entre os botões */
+  margin-top: 2rem;
+}
+
+.btn-agendamento button {
+  font-size: 1rem;
+  padding: 0.7rem 2.5rem;
+}
+
+select {
+  width: 100%;
+  height: 2.5rem;
+  font-size: 16px;
+  padding: 0 6px;
+  border: 1px solid #989898;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  color: var(--grey-color);
+  font-weight: 600;
+  transition: all 0.3s linear;
+  -webkit-appearance: none; /* remove o estilo padrão no Safari */
+  -moz-appearance: none; /* remove o estilo padrão no Firefox */
+  appearance: none; /* remove o estilo padrão no geral */
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%204%205'%3E%3Cpath%20fill='%23989898'%20d='M2%200L0%202h4L2%200zM2%205L0%203h4l-2%202z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+}
+
+select:focus {
+  border: 3px solid var(--main-color);
+  outline: none;
+}
+
+/* ======================
+   AÇÕES DO FORMULÁRIO
+====================== */
+.form-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  width: 100%;
+  text-align: right;
+}
+
+/* ======================
+   RODAPÉ
+====================== */
+footer {
+  margin-top: 40px;
+  text-align: right;
+  font-size: 12px;
+  color: #444;
+}
+
+
+/* ======================
+   MODAL
+====================== */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px 30px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0px 0px 10px #333;
+}
+
+.modal-content p {
+  margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* === Estilos adicionais da tela de pacientes === */
+
+.body-pacientes{
+   background-color: #f9f9f9;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px
+}
+
+.page-container-paciente {
+  width: 100%;
+  max-width: 1200px; 
+  background-color: #ffffff;
+  border-radius: 8px; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+
+  display: flex;
+  flex-direction: column;
+
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.page-header .header-content {
+  display: flex;
+  align-items: center;
+}
+
+.page-header .back-button {
+  font-size: 24px;
+  color: #333;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.page-header h1 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 3px solid #2e7b75;
+  padding-bottom: 5px;
+  display: inline-block;
+}
+
+.page-header .logo-paciente img {
+  max-height: 40px;
+}
+
+.page-content {
+  padding: 30px;
+  flex-grow: 1;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  gap: 10px;
+}
+
+.search-cpf{
+  font-weight: 600;
+  color: #555;
+}
+
+.search-container input[type="text"] {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  width: 30%;
+}
+
+.search-container .search-button {
+  padding: 10px 20px;
+  background-color: #2e7b75;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.search-container .search-button:hover {
+  background-color: #25625c;
+}
+
+.table-container {
+  overflow-x: auto;
+  margin-bottom: 25px;
+}
+
+.table-container table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.table-container th,
+.table-container td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.table-container th {
+  background-color: #f4f6f8;
+  font-weight: 600;
+  color: #333;
+}
+
+.table-container td small {
+  font-size: 12px;
+  color: #777;
+  display: block;
+  margin-top: 2px;
+}
+
+.action-link {
+  display: inline-block;
+  padding: 5px 10px;
+  color: #2e7b75;
+  font-weight: bold;
+  text-decoration: none;
+  border: 1px solid #2e7b75;
+  border-radius: 4px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.action-link:hover {
+  background-color: #2e7b75;
+  color: white;
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+  gap: 8px;
+}
+
+.pagination-container .page-link {
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #2e7b75;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.pagination-container .page-link:hover,
+.pagination-container .page-link.active {
+  background-color: #2e7b75;
+  color: white;
+  border-color: #2e7b75;
+}
+
+.pagination-container span {
+  padding: 8px 5px;
+  color: #777;
+}
+
+.footer-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.button-primary,
+.button-secondary {
+  padding: 12px 25px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.button-primary {
+  background-color: #2e7b75;
+  color: white;
+  border: 1px solid #2e7b75;
+}
+
+.button-primary:hover {
+  background-color: #25625c;
+  border-color: #25625c;
+}
+
+.button-secondary {
+  background-color: #f0f0f0;
+  color: #333;
+  border: 1px solid #ccc;
+}
+
+.button-secondary:hover {
+  background-color: #e0e0e0;
+  border-color: #bbb;
+}
+
+.page-footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 12px;
+  color: #777;
+  border-top: 1px solid #e0e0e0;
+}
+
+
+
+
+
+
+
+
+
+
+
+

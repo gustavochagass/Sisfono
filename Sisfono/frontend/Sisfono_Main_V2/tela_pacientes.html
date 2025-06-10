@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SISFONO - Pacientes</title>
+  <link rel="stylesheet" href="assets/css/central-refatorado.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap" />
+</head>
+<body class="body-pacientes">
+  <div class="page-container-paciente">
+    <header class="page-header">
+      <div class="header-content">
+        <h1>Pacientes</h1>
+      </div>
+      <div class="logo-paciente">
+        <img src="assets/img/logo_sisfono.png" alt="Logo SISFONO" />
+      </div>
+    </header>
+
+    <main class="page-content">
+      <div class="search-container">
+        <label for="search-cpf">PESQUISAR:</label>
+        <input type="text" id="search-cpf" placeholder="Digite o CPF" />
+        <button type="button" class="search-button">Buscar</button>
+      </div>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>CPF</th>
+              <th>Data de Início</th>
+              <th>Data de Término</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="pagination-container">
+        <a href="#" class="page-link active">1</a>
+        <a href="#" class="page-link">2</a>
+        <a href="#" class="page-link">3</a>
+        <span>...</span>
+        <a href="#" class="page-link">7</a>
+        <a href="#" class="page-link">8</a>
+        <a href="#" class="page-link next">&gt;</a>
+      </div>
+
+      <div class="footer-actions">
+        <button type="button" class="button-secondary" onclick="window.location.href='tela_fonoPrincipal.html'">VOLTAR</button>
+      </div>
+    </main>
+
+    <footer class="page-footer">
+      <small>Instituto Autismo de Parintins Isadora Tupinambar - IAPIN</small>
+    </footer>
+  </div>
+
+  <script src="assets/js/tela_pacientes.js"></script>
+
+</body>
+</html>

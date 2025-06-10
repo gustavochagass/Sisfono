@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro do Profissional - SISFONO</title>
+  <link rel="stylesheet" href="assets/css/central-refatorado.css" />
+</head>
+
+<body>
+  <div class="container-cadastro">
+    <header>
+      <div class="back-arrow"><a href="tela_login.html">&lt;</a></div>
+      <img src="assets/img/logo_sisfono.png" alt="Logo SISFONO" class="logo" />
+    </header>
+
+    <h1>Cadastro do Profissional</h1>
+
+    <form class="form-cadastro">
+      <div class="form-left">
+        <label>Nome completo:
+          <input type="text" name="nome" required />
+        </label>
+        <label>CPF:
+          <input type="text" name="cpf" required />
+        </label>
+        <label>CRF:
+          <input type="text" name="crf" required />
+        </label>
+      </div>
+
+
+      <div class="form-right">
+        <label>E-mail:
+          <input type="email" name="email" required />
+        </label>
+        <label>Telefone:
+          <input type="text" name="telefone" required />
+        </label>
+        <label>Criar senha:
+          <input type="password" name="senha" placeholder="Digite sua senha" required />
+        </label>
+
+        <small class="termos">
+          Ao se cadastrar ou acessar uma conta, você está de acordo com nossos <a href="#">Termos e Condições de Uso</a>
+          e <a href="#">Política de Privacidade</a>.
+        </small>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn-salvar">SALVAR</button>
+      </div>
+
+    </form>
+
+    <footer>
+      Instituto Autismo de Parintins Isadora Tupinambar - IAPIN
+    </footer>
+  </div>
+</body>
+
+<!-- Em tela_cadastro.html -->
+<script src="assets/js/cadastro.js"></script>
+
+</html>

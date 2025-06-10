@@ -1,0 +1,203 @@
+/* Importação da fonte */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+/* ======================
+   VARIÁVEIS DE CORES
+====================== */
+:root {
+    --main-color: #4FA095;
+    --second-color: #153462;
+    --white-color: #F4F2EE;
+    --grey-color: #8b8b8b;
+    --grey-color2: #c6c6c6;
+    --bg-color: #030F19;
+    --input-color: #2a8276;
+}
+
+/* ======================
+   RESET BÁSICO
+====================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--white-color);
+}
+
+/* ======================
+   INPUTS GERAIS
+====================== */
+input {
+    font-size: 16px;
+    padding: 0 30px;
+    border: 1px solid #989898;
+    border-radius: 10px;
+    background: #fff;
+    color: var(--input-color);
+    font-weight: 600;
+    transition: all 0.3s linear;
+    -webkit-appearance: none;
+}
+
+input:focus {
+    border: 3px solid var(--main-color);
+    outline: none;
+}
+
+/* ======================
+   CONTAINER PRINCIPAL
+====================== */
+.login-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+/* ======================
+   LADO ESQUERDO (IMAGEM)
+====================== */
+.login-left {
+    width: 65%;
+    background-color: #FEFDFA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-image {
+    width: 70%;
+}
+
+/* ======================
+   LADO DIREITO (FORMULÁRIO)
+====================== */
+.login-right {
+    width: 35%;
+    background-color: var(--white-color);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-logo {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 2.5rem;
+    color: var(--main-color);
+}
+
+/* ======================
+   FORMULÁRIO
+====================== */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* ======================
+   BOTÃO DE LOGIN
+====================== */
+.btn-login {
+    width: 100%;
+    padding: 1rem;
+    margin-top: 20px;
+    border: none;
+    border-radius: 24px;
+    background-color: var(--input-color);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    box-shadow: 0 2px 6px -1px rgba(0, 0, 0, 0.13);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-login:hover {
+    transform: translateY(-3px);
+    background-color: var(--main-color);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/* ======================
+   LINK DE CADASTRO
+====================== */
+.link-register {
+    margin-top: 2rem;
+    align-self: flex-start;
+    color: var(--grey-color);
+}
+
+.link-register:hover {
+    color: #555;
+    transition: 0.5s;
+}
+
+/* ======================
+   BOTÃO RESPONSÁVEL
+====================== */
+.btn-responsavel {
+    width: 100%;
+    padding: 1rem;
+    margin-top: 20px;
+    border: none;
+    border-radius: 24px;
+    font-size: 16px;
+    font-weight: 500;
+    outline: 3px solid var(--main-color);
+    background-color: transparent;
+    cursor: pointer;
+    box-shadow: 0 2px 6px -1px rgba(0, 0, 0, 0.13);
+    transition: all 0.3s ease;
+}
+
+.btn-responsavel:hover {
+    background-color: var(--input-color);
+    color: #fff;
+    outline: none;
+}
+
+/* ======================
+   ÍCONES NOS INPUTS
+====================== */
+.input_wrapper {
+    position: relative;
+}
+
+.input_wrapper i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #555;
+}
+
+.input_wrapper input {
+    padding-left: 35px;
+    /* espaço para o ícone */
+    height: 45px;
+    width: 100%;
+}

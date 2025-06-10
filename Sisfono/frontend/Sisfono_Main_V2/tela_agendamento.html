@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cadastro de Paciente</title>
+    <link rel="stylesheet" href="assets/css/central-refatorado.css" />
+</head>
+<body>
+    <div class="container-agendamento">
+        <header>
+            <div class="back-arrow"><a href="tela_fonoPrincipal.html">&lt;</a></div>
+            <img src="assets/img/logo_sisfono.png" alt="Logo SISFONO" class="logo" />
+        </header>
+
+        <h1>Cadastrar Paciente</h1>
+
+        <form class="form-cadastro-paciente" id="formPaciente">
+            <label class="label-agendamento">Nome completo:</label>
+            <input type="text" name="nomePaciente" required />
+
+            <label class="label-agendamento">Nome completo do responsável:</label>
+            <input type="text" name="nomeResponsavel" required />
+
+            <div class="inputs-agendamento">
+                <div class="input-agendamento-left">
+                    <label class="label-agendamento">Cartão do SUS:</label>
+                    <input type="text" name="cartaoSus" required />
+
+                    <label class="label-agendamento">RG:</label>
+                    <input type="text" name="rg" required />
+
+                    <label class="label-agendamento">CPF:</label>
+                    <input type="text" name="cpf" required />
+
+                    <label class="label-agendamento">Telefone:</label>
+                    <input type="text" name="telefone" required />
+                </div>
+
+                <div class="input-agendamento-right">
+                    <label class="label-agendamento">Dias:</label>
+                    <select name="diasSemana" required>
+                        <option value="" disabled selected>Selecione</option>
+                        <option>Segunda a Sexta</option>
+                        <option>Segunda, Quarta e Sexta</option>
+                        <option>Terça e Quinta</option>
+                    </select>
+
+                    <label class="label-agendamento">Data Início:</label>
+                    <input type="date" name="dataInicio" required />
+
+                    <label class="label-agendamento">Data Fim:</label>
+                    <input type="date" name="dataFim" required />
+
+                    <label class="label-agendamento">Horário:</label>
+                    <select name="horario" required>
+                        <option value="">Selecione</option>
+                        <option>08:00</option>
+                        <option>09:00</option>
+                        <option>10:00</option>
+                        <option>14:00</option>
+                        <option>15:00</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="btn-agendamento">
+                <button class="btn-agendamento-salvar" type="submit">SALVAR</button>
+            </div>
+        </form>
+    </div>
+
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <p id="modal-message"></p>
+            <button onclick="fecharModal()">OK</button>
+        </div>
+    </div>
+    
+    <script src="assets/js/cadastroPaciente.js"></script>
+</body>
+</html>

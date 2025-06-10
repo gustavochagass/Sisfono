@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sisfono - Login</title>
+    <link rel="stylesheet" href="assets/css/central-refatorado.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div class="login-container">
+        <!-- Lado esquerdo com imagem -->
+        <div class="login-left">
+            <img class="login-image" src="assets/img/images.melhorada.png" alt="Imagem de fundo">
+        </div>
+
+        <!-- Lado direito com formulário -->
+        <div class="login-right">
+            <h1 class="login-logo">SISFONO</h1>
+
+            <form class="login-form" action="#" method="post">
+                <div class="form-group">
+                    <!-- Campo de usuário -->
+                    <div class="input-group">
+                        <label for="user">Usuário</label>
+                        <div class="input_wrapper">
+                            <i class="fas fa-user"></i>
+                            <input type="text" placeholder="Digite seu e-mail ou CPF" autocomplete="off" id="user">
+                        </div>
+                    </div>
+
+                    <!-- Campo de senha -->
+                    <div class="input-group">
+                        <label for="password">Senha</label>
+                        <div class="input_wrapper">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="password" placeholder="Digite sua senha" autocomplete="off">
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn-login" type="submit">Acessar conta</button>
+            </form>
+
+            <a class="link-register" href="tela_cadastro.html">Ainda não é cadastrado? Clique aqui!</a>
+
+            <a class="btn-responsavel" href="tela_area_responsavel.html">Área do Responsável</a>
+        </div>
+    </div>
+</body>
+<script src="assets/js/login.js"></script>
+
+</html>

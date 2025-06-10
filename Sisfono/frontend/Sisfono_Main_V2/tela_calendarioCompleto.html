@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calendário - SISFONO</title>
+  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap" />
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    .header {
+      background-color: #ffffff;
+      padding: 20px;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header h1 {
+      font-size: 20px;
+      color: #2e7b75;
+    }
+
+    .btn-voltar {
+      background-color: #2e7b75;
+      color: white;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 14px;
+      transition: background-color 0.3s;
+    }
+
+    .btn-voltar:hover {
+      background-color: #135852;
+    }
+
+    #calendario-completo {
+      margin: 40px;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Calendário Sisfono</h1>
+    <a href="tela_fonoPrincipal.html" class="btn-voltar">Voltar</a>
+  </div>
+
+  <div id="calendario-completo"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/locales-all.global.min.js"></script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const calendarEl = document.getElementById('calendario-completo');
+      const calendar = new FullCalendar.Calendar(calendarEl, {
+        locale: 'pt-br',
+        initialView: 'timeGridWeek',
+        headerToolbar: {
+          left: 'prev,next today',
+          center: 'title',
+          right: 'dayGridMonth,timeGridWeek,timeGridDay'
+        },
+        buttonText: {
+          today: 'Hoje',
+          month: 'Mês',
+          week: 'Semana',
+          day: 'Dia'
+        },
+
+        allDayText: 'Dia inteiro',
+
+        // Limita o horário de exibição para 8h às 17h
+        slotMinTime: '08:00:00', // Começa às 8 da manhã
+        slotMaxTime: '17:00:00', // Termina às 5 da tarde (17h)
+
+        // Novas configurações para melhorar a aparência e proporção
+        height: 'auto', // Faz o calendário se ajustar à altura dos slots de tempo
+        slotLabelFormat: {
+          hour: '2-digit', // Garante dois dígitos para a hora (ex: 08, 09)
+          minute: '2-digit', // Garante dois dígitos para os minutos (ex: 00)
+          hour12: false // Formato 24 horas (00:00 - 23:59)
+        },
+        slotDuration: '00:30:00', // Define slots de 30 em 30 minutos
+        expandRows: true, // Garante que os slots preencham a altura disponível sem lacunas
+
+        events: [
+          // Altere as datas dos eventos para o ano atual para que apareçam
+          // Exemplo para 2025-06-06 (sexta-feira, 6 de junho de 2025)
+          // { title: 'João da Silva', start: '2025-06-06T09:00:00', end: '2025-06-06T09:30:00' },
+          // { title: 'Maria Oliveira', start: '2025-06-06T10:00:00', end: '2025-06-06T10:30:00' }
+        ]
+      });
+      calendar.render();
+    });
+  </script>
+
+</body>
+</html>
