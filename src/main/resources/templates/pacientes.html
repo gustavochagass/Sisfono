@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pacientes - Fonoaudiólogo</title>
+    <link rel="stylesheet" href="/assets/css/central-refatorado.css"> </head>
+<body class="body-pacientes">
+    <div class="container-pacientes">
+        <div class="div-pacientes">
+            <div class="back-arrow"><a href="/fonoPrincipal">&lt;</a></div> <h1 class="h1-pacientes">Meus Pacientes</h1>
+        </div>
+        
+        <div class="search-container-pacientes">
+            <input type="text" id="searchCpf" placeholder="Buscar paciente por CPF...">
+            <button id="searchBtn">Buscar</button>
+        </div>
+        
+        <table class="patients-table">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Telefone</th>
+                    <th>Dia da Semana</th>
+                    <th>Horário</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="patientsList">
+            </tbody>
+        </table>
+    </div>
+    
+    <script src="/assets/js/pacientes.js"></script> </body>
+</html>

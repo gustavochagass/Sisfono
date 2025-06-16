@@ -1,0 +1,917 @@
+/* Importação da fonte */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+/* ======================
+   VARIÁVEIS DE CORES
+====================== */
+:root {
+  --main-color: #4fa095;
+  --second-color: #153462;
+  --white-color: #ffffff;
+  --grey-color: #8b8b8b;
+  --grey-color2: #c6c6c6;
+  --bg-color: #030f19;
+  --input-color: #2a8276;
+}
+
+/* ======================
+   RESET BÁSICO
+====================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", serif;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--white-color);
+}
+
+.body-forms {
+  padding: 20px;
+  color: #333;
+}
+
+/* ======================
+   CONTAINERS GERAIS
+====================== */
+.container-areaResponsavel {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.login-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+.container-cadastro,
+.container-agendamento {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* ======================
+   HEADER E LOGO
+====================== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.logo {
+  margin-top: 1.5rem;
+  width: 9rem;
+  height: 2.5rem;
+}
+
+.login-logo {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 2.5rem;
+  color: var(--main-color);
+}
+
+/* ======================
+   LINKS E NAVEGAÇÃO
+====================== */
+.back-arrow {
+  font-size: 2.5rem;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.back-arrow a {
+  text-decoration: none;
+  color: #030f19;
+}
+
+.link-register {
+  margin-top: 2rem;
+  align-self: flex-start;
+  color: var(--grey-color);
+}
+
+.link-register:hover {
+  color: #555;
+  transition: 0.5s;
+}
+
+.termos {
+  font-size: 11px;
+  color: #333;
+  margin-top: 5px;
+}
+
+.termos a {
+  color: #2e7b75;
+  text-decoration: none;
+}
+
+/* ======================
+   LAYOUT DO LOGIN
+====================== */
+.login-left {
+  width: 65%;
+  background-color: #fefdfa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-image {
+  width: 70%;
+}
+
+.login-right {
+  width: 35%;
+  background-color: var(--white-color);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* ======================
+   TÍTULOS E TEXTOS
+====================== */
+h1 {
+  color: #2e7b75;
+  margin-top: 1rem;
+  padding-bottom: 5px;
+  font-size: 26px;
+}
+
+/* ======================
+   FORMULÁRIOS
+====================== */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+.form-pesquisaCpf {
+  display: flex;
+  gap: 40px;
+  margin-top: 1rem;
+  flex-direction: column;
+}
+
+.form-cpf {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-label-cpf {
+  font-size: 1.5rem;
+  padding: 5rem;
+}
+
+.form-actions-cpf {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-cadastro {
+  display: flex;
+  gap: 40px;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.form-left,
+.form-right {
+  flex: 1;
+  min-width: 300px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.label-agendamento {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+  margin-top: 14px;
+}
+
+/* ======================
+   INPUTS
+====================== */
+input {
+  width: 100%;
+  height: 2.5rem;
+  font-size: 16px;
+  padding: 0 6px;
+  border: 1px solid #989898;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  color: var(--input-color);
+  font-weight: 600;
+  transition: all 0.3s linear;
+  -webkit-appearance: none;
+}
+
+input:focus {
+  border: 3px solid var(--main-color);
+  outline: none;
+}
+
+input::placeholder {
+  color: #aaa;
+}
+
+.form-input-cpf {
+  width: 100%;
+  height: 4rem;
+  font-size: 20px;
+  padding: 0 6px;
+  border: 1px solid #989898;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  color: var(--input-color);
+  font-weight: 600;
+  transition: all 0.3s linear;
+  -webkit-appearance: none;
+}
+
+.form-input-cpf:focus {
+  border: 3px solid var(--main-color);
+  outline: none;
+}
+
+.form-input-cpf::placeholder {
+  color: #aaa;
+}
+
+.input_wrapper {
+  position: relative;
+}
+
+.input_wrapper i {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #555;
+}
+
+.input_wrapper input {
+  padding-left: 35px;
+  /* espaço para o ícone */
+  height: 45px;
+  width: 100%;
+}
+
+.inputs-agendamento {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-agendamento-left {
+  width: 30%;
+}
+
+.input-agendamento-right {
+  width: 30%;
+}
+
+/* ======================
+   ÍCONES NOS INPUTS
+====================== */
+.input_wrapper {
+  position: relative;
+}
+
+.input_wrapper i {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #555;
+}
+
+.input_wrapper input {
+  padding-left: 35px;
+  height: 45px;
+}
+
+/* ======================
+   BOTÕES
+====================== */
+.btn-salvar,
+.btn-responsavel {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 20px;
+  border: none;
+  border-radius: 24px;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: var(--input-color);
+  color: #fff;
+  box-shadow: 0 2px 6px -1px rgba(0, 0, 0, 0.13);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+
+.btn-login {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 20px;
+  border: none;
+  border-radius: 24px;
+  background-color: var(--input-color);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow: 0 2px 6px -1px rgba(0, 0, 0, 0.13);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-login:hover,
+.btn-salvar:hover {
+  transform: translateY(-3px);
+  background-color: var(--main-color);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.btn-responsavel {
+  background-color: transparent;
+  color: initial;
+  outline: 3px solid var(--main-color);
+}
+
+.btn-responsavel:hover {
+  background-color: var(--input-color);
+  color: #fff;
+  outline: none;
+}
+
+button {
+  background-color: #2e7b75;
+  color: white;
+  border: 1px solid #2e7b75;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #25665f;
+}
+
+.btn-pesquisar {
+  text-align: center;
+  text-decoration: none;
+
+  width: 50%;
+  padding: 1rem;
+
+  border: none;
+  border-radius: 20px;
+  background-color: var(--input-color);
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 0 2px 6px -1px rgba(0, 0, 0, 0.13);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-pesquisar:hover {
+  transform: translateY(-3px);
+  background-color: var(--main-color);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.btn-agendamento {
+  display: flex;
+  justify-content: center; /* centraliza os botões */
+  align-items: center;
+  gap: 1rem; /* espaçamento entre os botões */
+  margin-top: 2rem;
+}
+
+.btn-agendamento button {
+  font-size: 1rem;
+  padding: 0.7rem 2.5rem;
+}
+
+select {
+  width: 100%;
+  height: 2.5rem;
+  font-size: 16px;
+  padding: 0 6px;
+  border: 1px solid #989898;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  color: var(--grey-color);
+  font-weight: 600;
+  transition: all 0.3s linear;
+  -webkit-appearance: none; /* remove o estilo padrão no Safari */
+  -moz-appearance: none; /* remove o estilo padrão no Firefox */
+  appearance: none; /* remove o estilo padrão no geral */
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%204%205'%3E%3Cpath%20fill='%23989898'%20d='M2%200L0%202h4L2%200zM2%205L0%203h4l-2%202z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+}
+
+select:focus {
+  border: 3px solid var(--main-color);
+  outline: none;
+}
+
+/* ======================
+   AÇÕES DO FORMULÁRIO
+====================== */
+.form-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  width: 100%;
+  text-align: right;
+}
+
+/* ======================
+   RODAPÉ
+====================== */
+footer {
+  margin-top: 40px;
+  text-align: right;
+  font-size: 12px;
+  color: #444;
+}
+
+/* ======================
+   MODAL
+====================== */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px 30px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0px 0px 10px #333;
+}
+
+.modal-content p {
+  margin-bottom: 20px;
+}
+
+/* === pacientes.html === */
+
+.body-pacientes {
+  margin: 0;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.container-pacientes {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.h1-pacientes {
+  color: var(--input-color);
+  margin-bottom: 20px;
+  text-align: center;
+  margin-right: 40%;
+}
+
+.div-pacientes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-container-pacientes {
+  display: flex;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.search-container-pacientes input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.search-container button {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.search-container button:hover {
+  background-color: #2980b9;
+}
+
+.patients-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.patients-table th,
+.patients-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.patients-table th {
+  background-color: var(--input-color);
+  color: white;
+  font-weight: 500;
+}
+
+.patients-table tr:hover {
+  background-color: #f1f9ff;
+}
+
+.action-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+.view-btn {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.view-btn:hover {
+  background-color: #27ae60;
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 50%;
+  max-width: 600px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.close-btn {
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.patient-details {
+  margin-top: 20px;
+}
+
+.patient-details p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.patient-details strong {
+  color: #2c3e50;
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    width: 90%;
+    margin: 20% auto;
+  }
+
+  .patients-table {
+    display: block;
+    overflow-x: auto;
+  }
+}
+
+/* === detalhes_paciente.html === */
+
+/* Container principal da página de detalhes do paciente */
+.body-detalhes-pacientes {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--light-grey-color);
+  color: var(--second-color);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Garante que a página ocupe toda a altura da janela */
+}
+
+/* Container do topo com botão de voltar e título */
+.div-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 1.5rem 2rem;
+  height: 60px;
+  margin-top: 2rem;
+}
+
+/* Estilo da seta de voltar */
+.back-arrow-detalhes {
+  position: absolute;
+  top: 50%;
+  left: 2rem;
+  transform: translateY(-50%);
+  font-size: 2.5rem;
+}
+
+/* Link da seta de voltar */
+.back-arrow-detalhes a {
+  text-decoration: none;
+  color: #030f19;
+}
+
+/* Título principal da página */
+.h1-pacientes-details {
+  color: var(--input-color);
+  margin-bottom: 20px;
+  text-align: center;
+  margin-right: 40%; /* Ajusta espaçamento para centralizar visualmente */
+}
+
+/* Conteúdo principal da página */
+.main-content-detalhes-paciente {
+  flex-grow: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Alinha o conteúdo horizontalmente ao centro */
+}
+
+/* Cards de informações do paciente e da ficha médica */
+.patient-details-card,
+.ficha-details-card {
+  margin-top: 1rem;
+  background-color: var(--white-color);
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 800px;
+  border: 1px solid var(--grey-color);
+  box-sizing: border-box;
+}
+
+/* Títulos das seções */
+.section-title {
+  color: var(--second-color);
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  border-bottom: 2px solid var(--main-color);
+  padding-bottom: 10px;
+}
+.patient-info-grid p,
+.ficha-info-grid p {
+  margin: 0.8rem 0;
+  padding-bottom: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  word-break: break-word;
+}
+
+.patient-info-grid p:last-child,
+.ficha-info-grid p:last-child {
+  border-bottom: none;
+}
+
+.patient-info-grid strong,
+.ficha-info-grid strong {
+  color: var(--main-color);
+  min-width: 150px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.patient-info-grid,
+.ficha-info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px 30px;
+  padding: 0 1rem;
+}
+
+/* Mensagens de carregamento, erro e ausência de ficha */
+.loading-message,
+.error-message,
+.no-ficha-message {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--grey-color);
+  padding: 20px;
+}
+
+/* Estilo específico para mensagens de erro */
+.error-message {
+  color: #d9534f; /* Vermelho para indicar erro */
+  font-weight: bold;
+}
+
+/* Estilo específico para mensagens de ausência de ficha */
+.no-ficha-message {
+  color: var(--grey-color);
+  font-style: italic;
+}
+
+/* Responsividade: mantém uma coluna no grid em telas maiores */
+@media (min-width: 768px) {
+  .patient-info-grid,
+  .ficha-info-grid {
+    grid-template-columns: 1fr; /* Continua uma coluna */
+  }
+  .page-title {
+    text-align: left;
+  }
+}
+
+/* === tela_area_responsavel.html === */
+
+.h1-area-responsavel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ficha-container {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ficha-container h2 {
+  color: var(--main-color);
+  margin-bottom: 15px;
+}
+
+.ficha-item {
+  margin-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
+.ficha-item p {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  word-break: break-word;
+  width: 100%;
+}
+
+.ficha-item strong {
+  color: #333;
+  min-width: 150px;
+  display: inline-block;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.ficha-item p span {
+  flex-grow: 1;
+}
+
+.no-ficha-message {
+  color: #cc0000;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ffdddd;
+  background-color: #ffeeee;
+  border-radius: 5px;
+}
+
+.print-button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.print-button {
+  background-color: var(--main-color);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.print-button:hover {
+  background-color: var(--input-color);
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .ficha-container,
+  .ficha-container * {
+    visibility: visible;
+  }
+  .ficha-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+  }
+  .print-button-container {
+    display: none;
+  }
+}

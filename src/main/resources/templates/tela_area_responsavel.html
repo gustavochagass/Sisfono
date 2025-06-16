@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro do Profissional - SISFONO</title>
+    <link rel="stylesheet" href="/assets/css/central-refatorado.css" /> </head>
+  <body class="body-forms">
+    <div class="container-areaResponsavel">
+      <header>
+        <div class="back-arrow"><a href="/">&#60;</a></div> <img
+          src="/assets/img/logo_sisfono.png" alt="Logo SISFONO"
+          class="logo"
+        />
+      </header>
+
+      <h1 class="h1-area-responsavel">Área do Responsável</h1>
+
+      <form class="form-pesquisaCpf">
+        <div class="form-cpf">
+          <label class="form-label-cpf"
+            >CPF:
+            <input
+              type="text"
+              class="form-input-cpf"
+              id="cpfInput"
+              placeholder="Digite o CPF do paciente"
+            />
+          </label>
+        </div>
+
+        <div class="form-actions-cpf">
+          <button type="button" class="btn-pesquisar" id="searchFichaBtn">
+            PESQUISAR
+          </button>
+        </div>
+      </form>
+
+      <div id="fichaDisplayArea" class="ficha-container" style="display: none">
+        <h2>Ficha do Paciente</h2>
+        <div id="fichaContent"></div>
+        <div class="print-button-container">
+          <button type="button" class="print-button" id="printFichaBtn">
+            IMPRIMIR
+          </button>
+        </div>
+      </div>
+
+      <footer>Instituto Autismo de Parintins Isadora Tupinambar - IAPIN</footer>
+    </div>
+
+    <script src="/assets/js/tela_responsavel.js"></script> </body>
+</html>

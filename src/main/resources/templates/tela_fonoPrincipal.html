@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SISFONO Dashboard</title>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap"
+    />
+    <link rel="stylesheet" href="/assets/css/telaFonoPrincipal.css" /> <link
+      href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="body-dashboard">
+    <div class="dashboard">
+      <aside class="sidebar">
+        <div class="logo">
+          <img src="/assets/img/logo_sisfono.png" alt="Logo SISFONO" /> </div>
+        <nav>
+          <ul>
+            <li class="section">PRINCIPAL</li>
+            <li>
+              <a href="/pacientes"><span>👤</span> Pacientes</a> </li>
+            <li id="cadastro-item">
+              <div class="cadastro-label" onclick="toggleSubmenu()">
+                <span>📥</span> Cadastro
+              </div>
+              <ul class="submenu" style="display: none">
+                <li><a href="/cadastroPaciente">Agendamento</a></li> <li><a href="/ficha">Fichas</a></li> </ul>
+            </li>
+            <li>
+              <a href="#" onclick="logout()"><span>🔓</span> Sair</a>
+            </li>
+          </ul>
+          <ul>
+            <li class="section">SUPORTE</li>
+            <li>
+              <a href="#"><span>❓</span> Ajuda</a>
+            </li>
+            <li>
+              <a href="#"><span>⚙️</span> Configurações</a>
+            </li>
+          </ul>
+        </nav>
+        <footer>
+          <small
+            >Instituto Autismo de Parintins Isadora Tupinambar - IAPIN</small
+          >
+        </footer>
+      </aside>
+
+      <main class="main">
+        <header class="main-header">
+          <h1 id="user-greeting"></h1>
+          <div class="icons">
+            <span>⚙️</span>
+            <span>👤</span>
+          </div>
+        </header>
+
+        <section class="main-content">
+          <div class="row">
+            <div class="card pacientes">
+              <div class="card-header">
+                <h2>Pacientes</h2>
+                <div class="search-area">
+                  <label>PESQUISAR:</label>
+                  <input type="text" placeholder="Digite o CPF" />
+                  <a href="/pacientes">VER MAIS</a> </div>
+              </div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Nome</th>
+                    <th>CPF</th>
+                    <th>Data de Início</th>
+                    <th>Data de Término</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      Fulaninho de Tal da Silva <br />
+                    </td>
+                    <td>XXX.XXX.XXX-XX</td>
+                    <td>XX/XX/XXXX</td>
+                    <td>XX/XX/XXXX</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="card anotacoes">
+              <h2>Anotações</h2>
+              <textarea placeholder="Escreva suas anotações aqui..."></textarea>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="card horario">
+              <div class="card-header">
+                <h2>Calendário</h2>
+                <a href="/calendarioCompleto">VER MAIS</a> </div>
+              <div id="calendario-mini"></div>
+            </div>
+
+            <div class="card cadastro">
+              <h2>Cadastro</h2>
+              <div class="cadastro-botoes">
+                <a href="/ficha" class="botao-cadastro"> <p class="cadastro-options">
+                    +<br /><small>Criar ficha</small>
+                  </p>
+                </a>
+                <a href="/cadastroPaciente" class="botao-cadastro"> <p class="cadastro-options">
+                    +<br /><small>Novo Paciente</small>
+                  </p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/locales-all.global.min.js"></script>
+
+    <script src="/assets/js/tela_fonoPrincipal.js"></script> </body>
+</html>

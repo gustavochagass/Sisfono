@@ -1,0 +1,138 @@
+/* Estilos gerais para o container de detalhes */
+.details-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+/* Header da página de detalhes */
+.header-details {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+.h1-details {
+    flex-grow: 1; /* Permite que o título ocupe o espaço restante */
+    text-align: center;
+    color: #007bff; /* Cor primária */
+    font-size: 2em;
+    margin: 0;
+}
+
+/* Botão de voltar */
+.back-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.back-button .arrow {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Card de detalhes do paciente */
+.patient-details-card {
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas colunas para os dados */
+    gap: 20px;
+}
+
+/* Estilo para cada item de detalhe */
+.patient-details-card p {
+    margin: 0;
+    padding: 8px 0;
+    font-size: 1.1em;
+    border-bottom: 1px dashed #e9ecef; /* Linha tracejada suave */
+}
+
+.patient-details-card p:last-child,
+.patient-details-card p:nth-last-child(2) { /* Ajuste para não ter borda na última ou penúltima linha se forem de colunas diferentes */
+    border-bottom: none;
+}
+
+.patient-details-card p strong {
+    color: #555;
+    display: inline-block;
+    min-width: 120px; /* Garante alinhamento das chaves */
+}
+
+/* Mensagem de carregamento */
+.loading-message {
+    text-align: center;
+    font-style: italic;
+    color: #777;
+    grid-column: span 2; /* Ocupa as duas colunas */
+}
+
+/* Estilo para quando não há detalhes (erro ou vazio) */
+.error-message {
+    text-align: center;
+    color: #dc3545;
+    font-weight: bold;
+    grid-column: span 2;
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+    .patient-details-card {
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+    }
+
+    .header-details {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .h1-details {
+        text-align: left;
+        margin-top: 15px;
+        font-size: 1.8em;
+    }
+
+    .back-button {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .details-container {
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    .h1-details {
+        font-size: 1.5em;
+    }
+
+    .patient-details-card p {
+        font-size: 1em;
+    }
+}

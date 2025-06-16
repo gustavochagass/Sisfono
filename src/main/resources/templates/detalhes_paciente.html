@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detalhes do Paciente</title>
+    <link rel="stylesheet" href="/assets/css/central-refatorado.css" /> </head>
+<body>
+
+    <div class="body-detalhes-pacientes">
+
+        <div class="div-details">
+            <div class="back-arrow-detalhes">
+                <a href="/pacientes" aria-label="Voltar para a tela principal">&lt;</a> </div>
+            <h1 class="h1-paciente-details">Detalhes do Paciente (Informações e Ficha)</h1>
+        </div>
+
+        <main class="main-content-detalhes-paciente">
+
+            <section class="patient-details-card" id="patientDetailsCard">
+                <h2 class="section-title">Informações do Paciente</h2>
+                <div class="patient-info-grid" id="patientInfo">
+                    <p class="loading-message">Carregando detalhes do paciente...</p>
+                </div>
+            </section>
+
+            <section class="ficha-details-card" id="fichaDetailsCard" style="display: none;">
+                <h2 class="section-title">Ficha Médica</h2>
+                <div class="ficha-info-grid" id="fichaInfo">
+                    </div>
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="/assets/js/detalhes_paciente.js"></script> </body>
+</html>
